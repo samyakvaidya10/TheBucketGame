@@ -7,11 +7,11 @@
     <title>The Bucket Game</title>
 </head>
 <body>
-    
-    <button id="btn" onclick="moveLeft()">Left</button>
-    <button id="btn" onclick="moveRight()">Right</button>
-    <div id="drops"></div>
-    <div id="box"></div>
+    <div id="border">
+        <div id="box"></div>
+        <button class="btn" id="btnLeft" onclick="moveLeft()">Left</button>
+        <button class="btn" id="btnRight" onclick="moveRight()">Right</button>
+    </div>
     <link rel="stylesheet" href="style.css">
     <script src="buttons.js"></script>
 </body>
