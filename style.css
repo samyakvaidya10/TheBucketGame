@@ -1,0 +1,20 @@
+#box{
+    position: relative;
+    top: 100px;
+    border: 10px solid red;
+    height: 100px;
+    width: 100px;
+}
+#drops{
+    border: 5px solid blue;
+    height: 10px;
+    width: 10px;
+    animation: drop;
+    animation-duration: 4s;
+    position: relative;
+}
+@keyframes drop {
+    from{left: 0px; top: 0px;}
+    to{left: 0px; top: 175px;}
+
+}
