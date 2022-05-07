@@ -1,8 +1,11 @@
-var pos=40;
+var pos=0;
 var bucketPos=document.getElementById("box");
-var limit=document.getElementById("border");
+var limitBor=document.getElementById("limit");
+var step;
+var limit;
+calibration();
 function moveRight(){
-    if(!(((bucketPos.offsetLeft+bucketPos.offsetWidth)+25)>limit.offsetWidth)){
+    if(!(((bucketPos.offsetLeft+bucketPos.offsetWidth)+step)>limit)){
         pos=pos+10;
         var pos_string=pos+"%";
         document.getElementById("box").style.position="relative";
@@ -20,3 +23,10 @@ function moveLeft(){
     
 }
 
+function calibration(){
+    moveRight();
+    step=bucketPos.offsetLeft;
+    //console.log(step);
+    limit=((step*8)+bucketPos.offsetWidth);
+    limitBor.style.width=((limit-10)+"px");
+}

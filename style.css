@@ -1,12 +1,19 @@
 #box{
     position: relative;
     top: 75%;
-    left: 40%;
+    left: 0%;
     border: 10px solid red;
     height: 20%;
     width: 20%;
 }
 #border{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    height: 75%;
+    width: 50%;
+}
+#limit{
     position: absolute;
     top: 10%;
     left: 25%;
