@@ -8,8 +8,8 @@ function moveRight(){
     if(!(((bucketPos.offsetLeft+bucketPos.offsetWidth)+step)>limit)){
         pos=pos+10;
         var pos_string=pos+"%";
-        document.getElementById("box").style.position="relative";
-        document.getElementById("box").style.left=pos_string;
+        bucketPos.style.position="relative";
+        bucketPos.style.left=pos_string;
     }
 }
     
@@ -17,8 +17,8 @@ function moveLeft(){
     if(!(((bucketPos.offsetLeft)-15)<0)){
         pos=pos-10;
         var pos_string=pos+"%";
-        document.getElementById("box").style.position="relative";
-        document.getElementById("box").style.left=pos_string;
+        bucketPos.style.position="relative";
+        bucketPos.style.left=pos_string;
     }
     
 }
