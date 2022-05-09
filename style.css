@@ -1,6 +1,6 @@
 #box{
     position: relative;
-    top: 75%;
+    top: 70%;
     left: 0%;
     border: 10px solid red;
     height: 20%;
@@ -25,4 +25,12 @@
     position: relative;
     top: 80%;
     left: 40%;
+}
+#drop{
+    position: relative;
+    top: 5%;
+    left: 0%;
+    border: 5px solid blue;
+    height: 5%;
+    width: 5%;
 }
