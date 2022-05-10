@@ -33,4 +33,9 @@
     border: 5px solid blue;
     height: 5%;
     width: 5%;
+    animation: falling 3s;
+    animation-direction: alternate;
+}
+@keyframes falling {
+    100% {top: 80%;}
 }
