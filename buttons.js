@@ -43,3 +43,4 @@ function dropping(start, end){
     dropPos.style.left=newpos_string;
     console.log(dropPos.offsetLeft)
 }
+setInterval(dropping,3000);
