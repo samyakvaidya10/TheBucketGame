@@ -3,6 +3,7 @@ var bucketPos=document.getElementById("box");
 var limitBor=document.getElementById("limit");
 var dropPos=document.getElementById("drop");
 var step;
+var score=0;
 var limit;
 calibration();
 dropping(limitBor.offsetLeft,limitBor.offsetWidth);
@@ -43,4 +44,11 @@ function dropping(start, end){
     dropPos.style.left=newpos_string;
     console.log(dropPos.offsetLeft)
 }
+function scoreCount(){
+    if(dropPos.offsetLeft>=bucketPos.offsetLeft&&(dropPos.offsetLeft+dropPos.offsetWidth)<=(bucketPos.offsetLeft+bucketPos.offsetWidth)&&bucketPos.offsetTop<=dropPos.offsetTop){
+        score++;
+        console.log("score "+score);
+    }
+}   
 setInterval(dropping,3000);
+setInterval(scoreCount,1000);
