@@ -48,6 +48,7 @@ function scoreCount(){
     if(dropPos.offsetLeft>=bucketPos.offsetLeft&&(dropPos.offsetLeft+dropPos.offsetWidth)<=(bucketPos.offsetLeft+bucketPos.offsetWidth)&&bucketPos.offsetTop<=dropPos.offsetTop){
         score++;
         console.log("score "+score);
+        document.getElementById("sc").innerHTML=score;
     }
 }   
 setInterval(dropping,3000);
