@@ -49,6 +49,9 @@ function scoreCount(){
         score++;
         console.log("score "+score);
         document.getElementById("sc").innerHTML=score;
+    }else if(dropPos.offsetTop>=(bucketPos.offsetTop+10)){
+        document.getElementById("sc").innerHTML="out";
+
     }
 }   
 setInterval(dropping,3000);
