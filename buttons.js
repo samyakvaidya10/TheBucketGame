@@ -5,6 +5,7 @@ var dropPos=document.getElementById("drop");
 var step;
 var score=0;
 var limit;
+var life=3;
 calibration();
 dropping(limitBor.offsetLeft,limitBor.offsetWidth);
 function moveRight(){
@@ -51,7 +52,7 @@ function scoreCount(){
         document.getElementById("sc").innerHTML=score;
     }else if(dropPos.offsetTop>=(bucketPos.offsetTop+10)){
         document.getElementById("sc").innerHTML="out";
-
+        life--;
     }
 }   
 setInterval(dropping,3000);
