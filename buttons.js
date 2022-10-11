@@ -36,14 +36,11 @@ function calibration(){
 }
 
 function dropping(start, end){
-    console.log(limitBor.offsetLeft);
-    console.log(limitBor.offsetWidth);
+    dropPos.style.animation="falling 3s infinite";
     var newDropPos=Math.random(end-start)*100;
-    console.log(newDropPos);
     dropPos.style.position="relative";
     var newpos_string=newDropPos+"%";
     dropPos.style.left=newpos_string;
-    console.log(dropPos.offsetLeft)
 }
 function scoreCount(){
     if(dropPos.offsetLeft>=bucketPos.offsetLeft&&(dropPos.offsetLeft+dropPos.offsetWidth)<=(bucketPos.offsetLeft+bucketPos.offsetWidth)&&bucketPos.offsetTop<=dropPos.offsetTop){
@@ -51,9 +48,17 @@ function scoreCount(){
         console.log("score "+score);
         document.getElementById("sc").innerHTML=score;
     }else if(dropPos.offsetTop>=(bucketPos.offsetTop+10)){
+        if(life<=0){
+            stopGame()
+        }
         document.getElementById("sc").innerHTML="out";
         life--;
     }
 }   
-setInterval(dropping,3000);
+var game = setInterval(dropping,3000);
 setInterval(scoreCount,1000);
+
+function stopGame(){
+    clearInterval(game);
+    dropPos.style.animation="";
+}
