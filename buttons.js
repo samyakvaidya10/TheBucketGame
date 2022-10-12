@@ -6,6 +6,8 @@ var step;
 var score=0;
 var limit;
 var life=3;
+
+
 calibration();
 dropping(limitBor.offsetLeft,limitBor.offsetWidth);
 function moveRight(){
@@ -46,12 +48,13 @@ function scoreCount(){
     if(dropPos.offsetLeft>=bucketPos.offsetLeft&&(dropPos.offsetLeft+dropPos.offsetWidth)<=(bucketPos.offsetLeft+bucketPos.offsetWidth)&&bucketPos.offsetTop<=dropPos.offsetTop){
         score++;
         console.log("score "+score);
-        document.getElementById("sc").innerHTML=score;
+        document.getElementById("score-window").innerHTML=score;
     }else if(dropPos.offsetTop>=(bucketPos.offsetTop+10)){
         if(life<=0){
             stopGame()
         }
-        document.getElementById("sc").innerHTML="out";
+        document.getElementById("life-window").innerHTML=life;
+        document.getElementById("score-window").innerHTML="out";
         life--;
     }
 }   
