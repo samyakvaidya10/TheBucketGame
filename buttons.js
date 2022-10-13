@@ -65,3 +65,14 @@ function stopGame(){
     clearInterval(game);
     dropPos.style.animation="";
 }
+
+document.body.addEventListener('keydown',function(event){
+    let key=event.key;
+    if(key==="ArrowLeft"){
+        moveLeft();
+    }
+    if(key==="ArrowRight"){
+        moveRight();
+    }
+    
+})
